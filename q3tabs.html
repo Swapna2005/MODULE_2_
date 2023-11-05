@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+.tab  {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+
+.tab button {
+  background-color:aqua;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: chocolate;
+  
+}
+</style>
+</head>
+<body>
+
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Tab1')">BOOTSTRAP</button>
+  <button class="tablinks" onclick="openTab(event, 'Tab2')">LABEL</button>
+  <button class="tablinks" onclick="openTab(event, 'Tab3')">TABS</button>
+</div>
+
+<div id="Tab1" class="tabcontent">
+  <h3>bootstrap</h3>
+  <p>Bootstrap source code
+    The dist/ folder includes everything listed in the precompiled download section above. The docs/ folder includes the source code</p>
+</div>
+
+<div id="Tab2" class="tabcontent">
+  <h3>label</h3>
+  <p>hat is the content of a label?
+    The labeling must include detailed information on its characteristics, conservation and nutritional properties. The mandatory</p>
+</div>
+
+<div id="Tab3" class="tabcontent">
+  <h3>tabs</h3>
+  <p>Tabbed Navigation
+    Tabbed navigation is a way to navigate around a website.
+    Normally, tabbed navigation uses navigation buttons (tabs) arranged together with the selected tab highlighted.
+    This example uses elements with the same class name ("city" in our example) , and changes the style between display:none and disp</p>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html>
