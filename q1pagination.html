@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination Example</title>
+    <style>
+        .pagination {
+            display: inline-block;
+        }
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            margin: 0 4px;
+        }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <h1>pagination</h1>
+    <p>To create a basic pagination, add the .pagination class to an ul element. Then add the .page-item to each li element and a .page-link class to each link inside li:</p>
+</div>
+
+<div class="pagination">
+    <a href="previous">&laquo;</a>
+    <a href="page2.html" class="active">1</a>
+    <a href="page3.html">2</a>
+    <a href="page1.html">3</a>
+    <a href="page4.html">4</a>
+    <a href="page5.html">5</a>
+    <a href="#">&raquo;</a>
+</div>
+
+</body>
+</html>

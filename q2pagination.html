@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .pagination {
+    display: inline-block;
+  }
+
+  .pagination1.active {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+    background-color: #4CAF50;
+  }
+
+  .pagination2.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+    background-color: cadetblue;
+  }
+
+  .pagination a:hover:not(.active) {background-color: #dddddd;}
+</style>
+</head>
+<body>
+
+<div id="pagination">
+  
+</div>
+
+<div class="pagination">
+  <a href="pagination1.html" onclick="previousPage()">« Previous</a>
+  <a href="pagination2.html" onclick="nextPage()">Next »</a>
+</div>
+
+<script>
+  let currentPage = 1; 
+  const contentDiv = document.getElementById('content');
+
+  
+  function showPage(page) {
+    
+    contentDiv.innerHTML = `<p>Content of page ${page}</p>`;
+  }
+
+  
+  function previousPage() {
+    if (currentPage > 1) {
+      currentPage--;
+      showPage(currentPage);
+    }
+  }
+
+  
+  function nextPage() {
+    
+    const totalPages = 5;
+    if (currentPage < totalPages) {
+      currentPage++;
+      showPage(currentPage);
+    }
+  }
+
+  
+  showPage(currentPage);
+</script>
+
+</body>
+</html>
